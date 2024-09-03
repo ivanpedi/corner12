@@ -1,0 +1,168 @@
+/* estilos de la pagina en general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Estilos para la galeria dinamica SWIPER */
+
+.swiper {
+    width: 650px;
+    height: 400px;
+    margin-bottom: 250px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.swiper-slide img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide p {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* BOTONES PARA NAVEGAR POR LA GALERIA DINDAMICA */
+.secondary-nav {
+    width: 100%;
+    background: #212529;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    display: block;
+    margin-top: 150px;
+}
+
+.secondary-nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+.secondary-nav ul li {
+    margin: 0 10px;
+}
+
+.secondary-nav ul li a {
+    font-size: 35px;
+    padding: 10px;
+    display: block;
+    font-weight: bold;
+    font-family: "Bungee Spice", sans-serif;
+    text-decoration: none;
+    margin-top: 35px;
+    margin-right: 45px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.secondary-nav ul li a:hover {
+    transform: translateY(-5px);
+}
+
+.secondary-nav a.active {
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.secondary-nav.sticky {
+    display: block;
+    top: 60px;
+}
+
+/* Media quieries para los estilos DE LA BARRA DE NAV SECUNDARIA en pantalla para dispositivos moviles */
+@media (max-width:768px) {
+    .swiper {
+        width: 350px;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .swiper-slide img {
+        margin-top: 60px;
+        max-width: 100%; 
+    }
+    
+    .swiper-slide p {
+        margin-top: 20px; 
+        text-align: center; 
+        width: 100%; 
+        max-width: 300px; 
+        padding: 0 15px; 
+    }
+
+    .secondary-nav {
+        width: 100%;
+        background: #212529;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 900;
+        display: block;
+    }
+
+    .secondary-nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .secondary-nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+        padding: 8px 15px;
+        margin-left: 0;
+        margin-left: 20px;
+    }
+    #uno,
+    #tres {
+        margin-left: 60px;
+    }
+    #dos,
+    #cuatro {
+        margin-right: 60px;
+    }
+}
